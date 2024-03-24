@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/home';
+import About from './pages/about';
+import Error from './pages/error';
 
 function App() {
+  const [windowWidth, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleWindowResize = function(e) {
+      console.log(e);
+      setWidth(e.target.innerWidth);
+    }
+
+    window.addEventListener('resize', handleWindowResize)
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize)
+    }
+  }, [])
+  // console.log(windowWidth)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Routes>
+          <Route index path="/" element={<Home width={windowWidth}/>} />
+          <Route path="/about" element={<About width={windowWidth}/>} />
+          <Route path='*' element={<Error />} />
+        </Routes>
+    </Router>
   );
 }
 
 export default App;
+

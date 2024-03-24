@@ -1,0 +1,5 @@
+export const DESKTOP_MAX_WIDTH = 1440;
+export const MOBILE_MAX_WIDTH = 500;
+// const CARD_WRAPPER_WIDTH = DESKTOP_MAX_WIDTH * (70 / 100);
+export const CARD_NUMBER_PER_ROWS = 3;
+export const CARD_WIDTH = CARD_NUMBER_PER_ROWS;
