@@ -1,0 +1,11 @@
+.card {
+  background: rgba(255, 96, 96, 1);	
+  margin: 15px 15px;
+  width: 340px;
+  height: 340px;
+  height: 250px;
+}
+
+@media only screen and (min-width: 2160px) and (max-width: 3840px){
+	body {background:black;}
+}
