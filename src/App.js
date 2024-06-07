@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/home';
 import About from './pages/about';
 import Error from './pages/error';
+import Details from './pages/details';
 
 function App() {
   const [windowWidth, setWidth] = useState(window.innerWidth);
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route index path="/" element={<Home width={windowWidth}/>} />
           <Route path="/about" element={<About width={windowWidth}/>} />
+	  <Route path="/hebergement/:id" element={<Details />} />
           <Route path='*' element={<Error />} />
         </Routes>
     </Router>

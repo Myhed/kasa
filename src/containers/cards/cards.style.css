@@ -1,6 +1,7 @@
 .cards {
   margin: 0 auto;
   width: 70%;
+  position: relative;
   background-color: #CBC9C9;
   padding: 15px 0px;
   display: flex;

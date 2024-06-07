@@ -5,6 +5,9 @@ const Footer = () => {
 	
   return (
    <div id="footer">
+    <div id="logo-footer">
+     <img src="/images/logos/logo-footer.svg" />
+    </div>
      <p>
 	  © 2020 Kasa. All rights reserved
      </p>
