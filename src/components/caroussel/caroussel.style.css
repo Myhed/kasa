@@ -1,50 +1,60 @@
 .wrapper-caroussel {
- width:100%;
- background: blue;
- height:600px;
- margin: 30px auto;
- position:relative;
- overflow: hidden; 
- display:flex;
+    width: 1240px;
+    background: blue;
+    height: 600px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
 }
 
-
-
 .left::before {
- color:white;
- z-index:2;
- position:absolute;
- width:100px;
- height:100px;
- top: 30%;
- font-weight:bold;
- text-shadow:  5px 5px 10px black;
- font-size: 140px;
- padding:40px;
- content:'<'
+    color: white;
+    z-index: 2;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    font-weight: bold;
+    text-shadow: 5px 5px 10px black;
+    font-size: 140px;
+    padding: 40px;
+    content: '<';
 }
 
 .right::before {
-text-shadow:  5px 5px 10px black;
- color:white;
- position:absolute;
- width:100px;
- height:100px;
- top: 30%;
- right:0;
- font-weight:bold;
- font-size: 140px;
- padding:40px;
- z-index: 2;
- content: '>'
+    text-shadow: 5px 5px 10px black;
+    color: white;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    right: 0;
+    font-weight: bold;
+    font-size: 140px;
+    padding: 40px;
+    z-index: 2;
+    content: '>';
 }
 
 .row-reverse {
-	flex-direction:row-reverse;
+    flex-direction: row-reverse;
 }
 
-.pictures{
-  width: 1240px;
-  height:100%;
- display:flex;
+.pictures {
+    width: 1240px;
+    height: 100%;
+    display: flex;
+}
+
+@media (max-width: 3840px) and (min-width: 1800px) {
+    .wrapper-caroussel {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .wrapper-caroussel {
+        width: 100%;
+    }
 }
