@@ -1,0 +1,42 @@
+.content {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0 6rem;
+    max-width: 1440px;
+}
+
+.location h1 {
+    color: #ff6060;
+    font-size: 2.3rem;
+}
+.location p {
+    font-size: 1.13rem;
+}
+
+.host {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.hostname {
+    width: 55px;
+    text-align: center;
+}
+
+.profile {
+    height: 64px;
+    display: block;
+    border-radius: 50%;
+}
+#tags {
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    color: white;
+    padding: 0.4rem 0.6rem;
+    border-radius: 1.3rem;
+    background-color: #ff6060;
+}

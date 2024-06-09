@@ -11,6 +11,31 @@ const Details = () => {
             <Header />
             <div className="details">
                 <Caroussel pictures={state.pictures} />
+                <div className="content">
+                    <div className="location">
+                        <h1>{state.title}</h1>
+                        <p>{state.location}</p>
+                    </div>
+                    <div className="host">
+                        <img
+                            className="profile"
+                            alt="lorem"
+                            src={state.host.picture}
+                        />
+                        <p className="hostname">{state.host.name}</p>
+                    </div>
+                </div>
+                <div className="content">
+                    <div id="tags">
+                        {state.tags.map((tag, index) => (
+                            <p key={index} class="tag">
+                                {tag}
+                            </p>
+                        ))}
+                    </div>
+                    <Stars number={5} filled={state.rating} />
+                </div>
+                </div>
             </div>
             <Footer />
         </>
