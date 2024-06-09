@@ -8,7 +8,7 @@
     display: flex;
 }
 
-.left::before {
+.left {
     color: white;
     z-index: 2;
     position: absolute;
@@ -19,10 +19,10 @@
     text-shadow: 5px 5px 10px black;
     font-size: 140px;
     padding: 40px;
-    content: '<';
+    content: '';
 }
 
-.right::before {
+.right {
     text-shadow: 5px 5px 10px black;
     color: white;
     position: absolute;
@@ -34,7 +34,7 @@
     font-size: 140px;
     padding: 40px;
     z-index: 2;
-    content: '>';
+    content: '';
 }
 
 .row-reverse {

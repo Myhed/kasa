@@ -17,7 +17,7 @@ export const Toggler = (props) => {
         }
         return <p>{contents}</p>;
     };
-    console.log('contentToggled:', contentToggle, classUsed);
+    //console.log('contentToggled:', contentToggle, classUsed);
     return (
         <div className="toggler" key={id}>
             <header>

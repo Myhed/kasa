@@ -7,7 +7,9 @@ import { Stars } from '../components/stars/stars';
 import { ToggleDetails } from '../containers/toggle-details/toggleDetails';
 import './style/page.style.css';
 
-const Details = () => {
+const Details = (props) => {
+    const { width } = props;
+    console.log('Details Page Window Width:', width);
     const { state } = useLocation();
     console.log(state);
     return (
@@ -20,14 +22,16 @@ const Details = () => {
                         <h1>{state.title}</h1>
                         <p>{state.location}</p>
                     </div>
-                    <div className="host">
-                        <img
-                            className="profile"
-                            alt="lorem"
-                            src={state.host.picture}
-                        />
-                        <p className="hostname">{state.host.name}</p>
-                    </div>
+                    {width <= 892 ? null : (
+                        <div className="host">
+                            <img
+                                className="profile"
+                                alt="lorem"
+                                src={state.host.picture}
+                            />
+                            <p className="hostname">{state.host.name}</p>
+                        </div>
+                    )}
                 </div>
                 <div className="content">
                     <div id="tags">
@@ -37,8 +41,23 @@ const Details = () => {
                             </p>
                         ))}
                     </div>
-                    <Stars number={5} filled={state.rating} />
+                    {width <= 892 ? null : (
+                        <Stars number={5} filled={state.rating} />
+                    )}
                 </div>
+                {width <= 892 ? (
+                    <div className="mobile-content">
+                        <Stars number={5} filled={state.rating} />
+                        <div className="host">
+                            <img
+                                className="profile"
+                                alt="lorem"
+                                src={state.host.picture}
+                            />
+                            <p className="hostname">{state.host.name}</p>
+                        </div>
+                    </div>
+                ) : null}
                 <div className="content">
                     <ToggleDetails details={state} type="ManyToMany" />
                 </div>

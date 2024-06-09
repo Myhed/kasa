@@ -16,9 +16,9 @@
     "scripts": {
         "toto": "echo 'je suis toto'",
         "start": "react-scripts start",
-    "prettier:format": "npm run prettier:format:json && npm run prettier:format:src",
-    "prettier:format:src": "prettier src/**/*.{js,jsx} --write",
-    "prettier:format:json": "prettier ./package.json --write --cache",
+        "prettier:format": "npm run prettier:format:json && npm run prettier:format:src",
+        "prettier:format:src": "prettier src/**/*.{js,jsx} --write",
+        "prettier:format:json": "prettier ./package.json --write --cache",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",

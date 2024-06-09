@@ -1,41 +1,73 @@
 #banner {
- z-index:1;
- width: 75%;
- display:flex;
- flex-direction:column;
-  align-items:center;
- /*background:red;*/
- justify-content:center;
- margin:0 auto;
- position:relative;
- height:200px;
- margin-bottom:75px;
+    z-index: 1;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*background:red;*/
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    height: 200px;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+    margin-bottom: 75px;
 }
 .mask {
- border-radius:25px;
- position:absolute;
- background: black;
- top:0;
- bottom:0;
- right:0;
- left:0;
- opacity:0.6;
- z-index:3;
+    border-radius: 25px;
+    position: absolute;
+    background: black;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.6;
+    z-index: 3;
 }
 #banner img {
- border-radius:25px;
- position:absolute;
- width:100%;
- height:100%;
- z-index:2;
- object-fit:cover;
+    border-radius: 25px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    object-fit: cover;
 }
 
 #banner h1 {
- font-size:48px;
- position: relative;
- z-index:4;
- color:white;
- text-shadow: 2px 2px 4px #000000;
+    font-size: 48px;
+    position: relative;
+    z-index: 4;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+@media screen and (max-width: 1280px) {
+    #banner {
+        width: 100%;
+    }
+}
 
+@media screen and (max-width: 992px) {
+    #banner {
+        width: 100%;
+    }
+    #banner h1 {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 475px) {
+    #banner {
+        margin-top: 30px;
+        box-sizing: border-box;
+        padding: 1rem 1rem;
+    }
+
+    #banner h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #banner h1 {
+        font-size: 34px;
+    }
 }

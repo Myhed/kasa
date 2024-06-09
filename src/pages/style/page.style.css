@@ -2,25 +2,35 @@
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
-    padding: 0 6rem;
+    padding: 0;
+}
+.content:last-child {
+    padding-bottom: 1rem;
+}
+.details {
     max-width: 1440px;
+    margin: 0 auto;
 }
 
 .location h1 {
     color: #ff6060;
     font-size: 2.3rem;
+    margin-bottom: 10px;
 }
+
 .location p {
     font-size: 1.13rem;
+    margin: 0;
 }
 
 .host {
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
 }
 
 .hostname {
-    width: 55px;
+    width: 75px;
     text-align: center;
 }
 
@@ -34,9 +44,31 @@
     gap: 10px;
 }
 
+.mobile-content {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
 .tag {
     color: white;
     padding: 0.4rem 0.6rem;
     border-radius: 1.3rem;
     background-color: #ff6060;
+}
+
+@media screen and (max-width: 892px) {
+    .details {
+        width: 100%;
+    }
+    .content {
+        width: 100%;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    .toggler {
+        width: inherit;
+        height: inherit;
+    }
 }

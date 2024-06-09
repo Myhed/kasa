@@ -1,6 +1,6 @@
 .toggler {
     width: 48%;
-    padding: 5rem 0rem;
+    padding: 0.5rem 0rem;
 }
 .toggler header {
     color: white;
@@ -30,6 +30,6 @@
 }
 
 .toggled {
-    height: 300px;
+    height: inherit;
     display: block;
 }

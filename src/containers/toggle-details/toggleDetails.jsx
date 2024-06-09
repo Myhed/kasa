@@ -17,7 +17,7 @@ export const ToggleDetails = (props) => {
             return acc;
         }, {});
     const handleClick = (e, id) => {
-        console.log(e, id);
+        //console.log(e, id);
         const valuesToggled = toggled.map((value, index) =>
             index === id
                 ? value
@@ -27,7 +27,7 @@ export const ToggleDetails = (props) => {
                   ? false
                   : value,
         );
-        console.log(valuesToggled);
+        //console.log(valuesToggled);
         setToggled(valuesToggled);
     };
     const Togglers = () => {
@@ -44,6 +44,6 @@ export const ToggleDetails = (props) => {
             );
         });
     };
-    console.log('datasTriggered: ', datasTriggered);
+    //console.log('datasTriggered: ', datasTriggered);
     return <>{Togglers()}</>;
 };

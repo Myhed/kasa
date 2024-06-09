@@ -1,11 +1,25 @@
 .cards {
-  margin: 0 auto;
-  width: 70%;
-  position: relative;
-  background-color: #CBC9C9;
-  padding: 15px 0px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  border-radius: 20px;
+    margin: 0 auto;
+    width: 70%;
+    position: relative;
+    background-color: #cbc9c9;
+    padding: 15px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 20px;
+}
+@media screen and (max-width: 1280px) {
+    .cards {
+        width: 100%;
+        background: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .cards {
+        width: 100%;
+        padding: 0;
+        background: none;
+    }
 }
