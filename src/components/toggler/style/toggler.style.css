@@ -1,0 +1,35 @@
+.toggler {
+    width: 48%;
+    padding: 5rem 0rem;
+}
+.toggler header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    background: #ff6060;
+    padding: 0.1rem 1.2rem;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    top: -20px;
+    transition: all 0.5s ease-in;
+    width: 98%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 1rem 1rem;
+    border-end-end-radius: 20px;
+    border-end-start-radius: 20px;
+    background: #f6f6f6;
+    z-index: 0;
+    display: none;
+    align-items: center;
+}
+
+.toggled {
+    height: 300px;
+    display: block;
+}
