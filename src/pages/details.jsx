@@ -3,6 +3,10 @@ import { useLocation } from 'react-router-dom';
 import Header from '../partials/header';
 import Footer from '../partials/footer';
 import { Caroussel } from '../components/caroussel/caroussel';
+import { Stars } from '../components/stars/stars';
+import { ToggleDetails } from '../containers/toggle-details/toggleDetails';
+import './style/page.style.css';
+
 const Details = () => {
     const { state } = useLocation();
     console.log(state);
@@ -35,6 +39,8 @@ const Details = () => {
                     </div>
                     <Stars number={5} filled={state.rating} />
                 </div>
+                <div className="content">
+                    <ToggleDetails details={state} type="ManyToMany" />
                 </div>
             </div>
             <Footer />
