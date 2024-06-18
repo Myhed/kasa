@@ -2,13 +2,22 @@ import React, { useEffect, useState } from 'react';
 import './style/toggler.style.css';
 
 export const Toggler = (props) => {
-    const { handleClickArrow, titleHeader, contents, toggled, id } = props;
+    const {
+        handleClickArrow,
+        titleHeader,
+        contents,
+        toggled,
+        id,
+        arrowDirection,
+    } = props;
     const [contentToggle, setContentToggle] = useState(toggled);
+    const [arrowSrc, setArrowSrc] = useState(arrowDirection);
     const contentsMap = () =>
         contents.map((content, index) => <p key={index}>{content}</p>);
     let classUsed = 'container';
     useEffect(() => {
         setContentToggle(toggled);
+        console.log('arrowDirection: ', arrowDirection);
         // return () => contentToggle;
     }, [toggled]);
     const initContent = () => {
@@ -24,7 +33,7 @@ export const Toggler = (props) => {
                 <h3>{titleHeader}</h3>
                 <img
                     class="arrow-back"
-                    src="/images/arrow_back.svg"
+                    src={arrowDirection}
                     onClick={(e) => handleClickArrow(e, id)}
                 />
             </header>

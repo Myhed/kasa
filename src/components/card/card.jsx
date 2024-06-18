@@ -32,6 +32,7 @@ const Card = ({
     };
     return (
         <div className="card" key={index}>
+            <div className="mask-image"></div>
             <img src={cover} />
             <a
                 href={`/hebergement/${id}`}

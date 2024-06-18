@@ -5,6 +5,7 @@
     margin: 30px auto;
     position: relative;
     overflow: hidden;
+    border-radius: 20px;
     display: flex;
 }
 
@@ -20,6 +21,17 @@
     font-size: 140px;
     padding: 40px;
     content: '';
+}
+
+.cursor-caroussel {
+    font-size: 25px;
+    position: absolute;
+    z-index: 3;
+    right: 50%;
+    color: white;
+    left: 50%;
+    bottom: 5%;
+    width: 100%;
 }
 
 .right {

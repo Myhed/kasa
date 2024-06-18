@@ -7,9 +7,21 @@
 .content:last-child {
     padding-bottom: 1rem;
 }
+
 .details {
     max-width: 1440px;
     margin: 0 auto;
+}
+
+.container-space {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .location h1 {
@@ -66,9 +78,5 @@
         width: 100%;
         flex-direction: column;
         box-sizing: border-box;
-    }
-    .toggler {
-        width: inherit;
-        height: inherit;
     }
 }

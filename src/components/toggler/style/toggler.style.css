@@ -1,14 +1,16 @@
 .toggler {
     width: 48%;
     padding: 0.5rem 0rem;
+    margin-bottom: 10px;
 }
+
 .toggler header {
     color: white;
     display: flex;
     justify-content: space-between;
     background: #ff6060;
     padding: 0.1rem 1.2rem;
-    border-radius: 20px;
+    border-radius: 12px;
     position: relative;
     z-index: 1;
 }
@@ -32,4 +34,10 @@
 .toggled {
     height: inherit;
     display: block;
+}
+
+@media screen and (max-width: 1080px) {
+    .toggler {
+        width: 100%;
+    }
 }

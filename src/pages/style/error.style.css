@@ -1,0 +1,30 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    gap: 75px;
+}
+
+.error h1 {
+    padding: 0;
+    margin: 0;
+    color: #ff6060;
+    font-size: 240px;
+}
+
+.error p {
+    font-size: 34px;
+    color: #ff6060;
+    text-align: center;
+}
+
+.error a {
+    font-size: 18px;
+}
+
+.error a:visited {
+    color: black;
+}

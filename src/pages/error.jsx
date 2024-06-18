@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/navigation/navigation';
-
-const Error = () => {
+import './style/error.style.css';
+const Error = ({ included }) => {
     return (
-        <div>
-            <Navigation />
-            <h2>Page non trouvée</h2>
-            <p>Désolé, la page que vous recherchez n'existe pas.</p>
+        <div class="error">
+            {included ? null : <Navigation />}
+            <h1>404</h1>
+            <p>Oups! La page que vous demandez n'existe pas.</p>
+            <Link to="/">Retourner sur la page d'Accueil</Link>
         </div>
     );
 };

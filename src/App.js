@@ -4,6 +4,9 @@ import Home from './pages/home';
 import About from './pages/about';
 import Error from './pages/error';
 import Details from './pages/details';
+import Header from './partials/header';
+import Footer from './partials/footer';
+
 import './App.css';
 
 function App() {
@@ -16,6 +19,7 @@ function App() {
     //console.log(windowWidth);
     return (
         <Router>
+            <Header />
             <Routes>
                 <Route index path="/" element={<Home width={windowWidth} />} />
                 <Route path="/about" element={<About width={windowWidth} />} />
@@ -25,6 +29,8 @@ function App() {
                 />
                 <Route path="*" element={<Error />} />
             </Routes>
+
+            <Footer />
         </Router>
     );
 }

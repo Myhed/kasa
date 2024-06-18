@@ -24,14 +24,6 @@ export const Caroussel = (props) => {
     };
     let picturesDom = renderPictures();
     useEffect(() => {
-        if (direction === 'Next') {
-            setPosition(count * -1240);
-        }
-
-        if (direction === 'Prev') {
-            console.log('Yes prev');
-            setPosition(count * -1240);
-        }
         console.log(count);
         console.log(position);
         console.log(direction);
@@ -76,6 +68,9 @@ export const Caroussel = (props) => {
             {/*<div className={`pictures ${className}`} style={{transform: `translateX(${position + 'px'})`}}>
 	  </div> */}
             <ItemCaroussel path={pictures[count]} />
+            <p class="cursor-caroussel">
+                {count + 1}/{picturesDom.length}
+            </p>
         </div>
     );
 };

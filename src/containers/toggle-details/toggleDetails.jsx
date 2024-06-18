@@ -3,13 +3,19 @@ import React, { useEffect, useState } from 'react';
 import { Toggler } from '../../components/toggler/toggler';
 
 export const ToggleDetails = (props) => {
-    const { details, type } = props;
-    const triggerKeys = ['description', 'equipments'];
+    const { details, type, keysToToggle } = props;
+    //const triggerKeys = ['description', 'equipments'];
     const [toggled, setToggled] = useState(
-        Array(triggerKeys.length).fill(false),
+        Array(keysToToggle.length).fill(false),
     );
-    const datasTriggered = Array(triggerKeys.length)
-        .fill([triggerKeys, Object.values(details)])
+    const [arrowsDirection, setArrowsDirection] = useState(
+        Array(keysToToggle.length).fill({
+            direction: 'up',
+            image: '/images/arrow_back.svg',
+        }),
+    );
+    const datasTriggered = Array(keysToToggle.length)
+        .fill([keysToToggle, Object.values(details)])
         .reduce((acc, current, index) => {
             const keysDetails = Object.keys(details);
             const indexTriggeredDatas = keysDetails.indexOf(current[0][index]);
@@ -27,11 +33,31 @@ export const ToggleDetails = (props) => {
                   ? false
                   : value,
         );
+        const arrowsDirectionChange = arrowsDirection.map(
+            (arrowDirection, index) => {
+                if (index === id) {
+                    if (arrowDirection.direction === 'up') {
+                        return {
+                            direction: 'down',
+                            image: '/images/arrow_down.svg',
+                        };
+                    } else {
+                        return {
+                            direction: 'up',
+                            image: '/images/arrow_back.svg',
+                        };
+                    }
+                }
+                return arrowDirection;
+            },
+        );
         //console.log(valuesToggled);
         setToggled(valuesToggled);
+        setArrowsDirection(arrowsDirectionChange);
     };
+    console.log(datasTriggered);
     const Togglers = () => {
-        return triggerKeys.map((key, index) => {
+        return keysToToggle.map((key, index) => {
             return (
                 <Toggler
                     key={index}
@@ -39,6 +65,7 @@ export const ToggleDetails = (props) => {
                     titleHeader={key}
                     toggled={toggled[index]}
                     contents={datasTriggered[key]}
+                    arrowDirection={arrowsDirection[index].image}
                     handleClickArrow={handleClick}
                 />
             );
